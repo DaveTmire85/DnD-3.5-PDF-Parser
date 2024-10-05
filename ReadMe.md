@@ -1,6 +1,18 @@
 # DnD 3.5 PDF Parser and Compendium Builder
 
-This project is designed to parse Dungeons and Dragons 3.5 sourcebook PDFs, extract relevant game data (races, classes, feats, skills, spells, and stat blocks), and store it in a MongoDB database. It also provides prompts for missing or incomplete data, and ensures all parsed data is formatted correctly.
+This project is designed to parse Dungeons and Dragons 3.5 sourcebook PDFs (which MUST be provided by the user), extract relevant game data (races, classes, feats, skills, spells, and stat blocks), and store it in a MongoDB database. It also provides prompts for missing or incomplete data, and ensures all parsed data is formatted correctly.
+
+I plan on using this as the back-end for an app later on, so this doesn't have any UI at all. 
+
+## What Do You Need To Provide:
+- First and foremost, without source materials already downloaded (I've used all OGL open-license materials for proof of concept, as well as for legal reasons).
+- Where this setup fails is that there are times when the regEx I use, combined with OCR, fails to pull data. As the end-user, it's up to you to review the PDF manually and input the information. I've set up prompts that tell you what you're looking for: a regEx, string, numerical value, etc. (If you want to help me fix that, I'm down; shoot me a message.)
+- By default this wipes all images from the document to achieve better OCR and text parsing results. I've set this up to keep tables and the general page structure, so all the data should come out well structured and easily readable.
+
+## Goals
+- This will eventually serve as the back-end for an Android app. If it functions well across multiple tests, I'll convert to iOS and redeploy. 
+-I may package it up and run it in Electron for use on all major desktop platforms.
+-I'm always willing to consider offers to evaluate my code, submit fixes, ideas, and development tips. Get in touch at davetmire85ATgmailDOTcom.
 
 ## Features
 - Extracts data from PDFs while preserving important tables and diagrams.
