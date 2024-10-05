@@ -1,0 +1,2 @@
+PyMuPDF==1.18.19
+pymongo==4.1.1
